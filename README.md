@@ -1,9 +1,11 @@
 # README
 
-- Live preview link: [https://freedom-press-sample.netlify.app/](https://freedom-press-sample.netlify.app/)
+- [Live preview link](https://freedom-press-sample.netlify.app/)
 - [Video presentation about the code detail](https://www.loom.com/share/84716b55b0e24ea191222d9b263f2342)
 
-## Why Radix UI, tailwind and Next.js
+The code is built from [my `nextjs` boilerplate](https://github.com/reboottime/next-boilerplate)
+
+## Why `Radix UI`, `Tailwind` and `Next.js`
 
 - HTML code with tailwind looks messy at first sight, yet it is powerful
   - customize our theme and responsive breaking points using directives and [tailwind.config.js](./tailwind.config.js)
