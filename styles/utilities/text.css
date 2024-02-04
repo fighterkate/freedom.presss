@@ -1,0 +1,19 @@
+@tailwind utilities;
+
+@layer utilities {
+  /* text */
+  /* font-family */
+  .ff-din {
+    font-family: "ff-din", sans-serif;
+  }
+
+  .text--easyish-reading {
+    @apply text-dark-2 text-lg;
+    font-family: ff-tisa, Cambria, Georgia;
+  }
+
+  .section-heading {
+    @apply text-dark-2 text-lg font-normal uppercase leading-normal tracking-wide;
+    font-family: skolar-sans, Calibri, Verdana;
+  }
+}

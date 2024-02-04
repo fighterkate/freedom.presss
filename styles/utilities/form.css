@@ -1,0 +1,28 @@
+@tailwind utilities;
+
+@layer utilities {
+  /* form */
+  .form-group {
+    @apply mb-4;
+  }
+  .form-group:last-child {
+    @apply mb-0;
+  }
+
+  .form-control {
+    @apply bg-gray-2
+          border-stroke block  w-full
+          border
+          px-3 py-2 text-base 
+          leading-tight md:py-3;
+  }
+  .form-control::placeholder {
+    @apply text-dark-3;
+  }
+  .form-control--rounded {
+    @apply rounded-md border;
+  }
+  .form-control:focus {
+    @apply text-dark-1 border-link-1 outline-none;
+  }
+}

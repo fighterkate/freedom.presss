@@ -1,0 +1,42 @@
+@tailwind utilities;
+
+@layer utilities {
+  .drawer {
+    @apply fixed z-50 overflow-hidden bg-white transition-all;
+  }
+
+  .drawer--full {
+    @apply w-full max-w-[768px];
+  }
+
+  .drawer--left-in {
+    @apply h-screen -left-[100%] top-0;
+  }
+
+  .drawer--left-in.is-visible {
+    @apply top-0 left-0;
+  }
+
+  .drawer--right-in {
+    @apply h-screen -right-[100%] top-0;
+  }
+
+  .drawer--right-in.is-visible {
+    @apply right-0;
+  }
+
+  .drawer--bottom-in {
+    @apply w-full max-h-[60%] -bottom-[100%] left-0;
+  }
+  .drawer--bottom-in.is-visible {
+    @apply bottom-0;
+  }
+
+  .drawer--top-in {
+    @apply w-full max-h-[60%] -top-[100%] left-0;
+  }
+
+  .drawer--top-in.is-visible {
+    @apply top-0;
+  }
+}

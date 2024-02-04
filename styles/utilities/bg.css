@@ -1,0 +1,17 @@
+@tailwind utilities;
+
+@layer utilities {
+  .background-image--fpf-gradient::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /* background-image: -webkit-linear-gradient(60deg,rgba(97,0,0,0.7) 0,rgba(56,81,97,0.7) 65%); */
+    background-image: -o-linear-gradient(60deg, rgba(97, 0, 0, 0.7) 0, rgba(56, 81, 97, 0.7) 65%);
+    background-image: linear-gradient(30deg, rgba(97, 0, 0, 0.7) 0, rgba(56, 81, 97, 0.7) 65%);
+    z-index: 0;
+  }
+}

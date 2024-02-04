@@ -1,0 +1,31 @@
+@tailwind utilities;
+
+@layer utilities {
+  /* button */
+  .button {
+    @apply inline-flex cursor-pointer items-center 
+           justify-center  whitespace-nowrap 
+          border 
+          border-transparent px-1
+          py-2 font-normal leading-tight;
+  }
+
+  .button--primary {
+    @apply border-red bg-red text-white;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .button--primary:hover {
+    @apply border-red-2 bg-red-1;
+  }
+
+  .button--full-width {
+    @apply flex w-full rounded-md;
+  }
+
+  @screen lg {
+    .button {
+      @apply py-3;
+    }
+  }
+}
