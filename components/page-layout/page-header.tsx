@@ -16,9 +16,7 @@ export default function PageHeader() {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
 
   useIsomorphicLayoutEffect(() => {
-    if (isAboveMobile) {
-      setIsSidebarVisible(false);
-    }
+    setIsSidebarVisible(!isAboveMobile);
   }, [isAboveMobile]);
 
   return (
