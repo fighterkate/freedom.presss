@@ -3,7 +3,6 @@ const defaultTheme = require("tailwindcss/defaultTheme")
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: "class",
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -37,7 +36,6 @@ module.exports = {
         link: "#6a90a9",
         'link-1': '#66afe9',
         stroke: '#eceeef',
-
       },
       fontFamily: {
         body: [
