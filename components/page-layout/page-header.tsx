@@ -38,7 +38,7 @@ export default function PageHeader() {
         Logo
       </Link>
       {/* mobile version layout */}
-      <SideNavbar onToggleVisibility={setIsSidebarVisible} isVisible={isSidebarVisible} />
+      <SideNavbar onVisibilityToggle={setIsSidebarVisible} isVisible={isSidebarVisible} />
       <div className="hidden md:block">
         <PageHeaderNavigation />
       </div>

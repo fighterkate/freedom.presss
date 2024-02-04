@@ -9,7 +9,7 @@ import useIsomorphicLayoutEffect from 'hooks/use-isomorphic-layout-effect';
 
 import PageHeaderNavigation from './page-header-navigation';
 
-export default function SideNavbar({ isVisible, onToggleVisibility }: SideNavbarProps) {
+export default function SideNavbar({ isVisible, onVisibilityToggle }: SideNavbarProps) {
   const [container, setContainer] = useState<HTMLElement>();
 
   useIsomorphicLayoutEffect(() => {
@@ -30,7 +30,7 @@ export default function SideNavbar({ isVisible, onToggleVisibility }: SideNavbar
     <>
       <button
         className={cn('button', 'md:hidden', 'relative z-50', 'h-10 w-10', 'bg-white', 'text-dark', 'rounded-sm')}
-        onClick={onToggleVisibility.bind(null, !isVisible)}
+        onClick={onVisibilityToggle.bind(null, !isVisible)}
       >
         {isVisible
           ? <X size={40} />
@@ -57,7 +57,7 @@ export default function SideNavbar({ isVisible, onToggleVisibility }: SideNavbar
           className={cn('overlay', {
             'left-[100%]': !isVisible,
           })}
-          onClick={onToggleVisibility.bind(null, false)}
+          onClick={onVisibilityToggle.bind(null, false)}
         />
       </Portal.Root>
     </>
@@ -66,5 +66,5 @@ export default function SideNavbar({ isVisible, onToggleVisibility }: SideNavbar
 
 export interface SideNavbarProps {
   isVisible: boolean
-  onToggleVisibility: (state: boolean) => void
+  onVisibilityToggle: (state: boolean) => void
 }
