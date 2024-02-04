@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 import DonateNow from 'components/donate-now';
 import GetNotified from 'components/get-notified';
-import HomeHero from 'components/home-hero/home-hero';
+import HomeHero from 'components/home-hero';
 import Projects from 'components/projects/projects';
 import RecentNews from 'components/recent-news/recent-news';
 
