@@ -9,15 +9,19 @@ import useMediaQuery from 'hooks/use-media-query';
 
 import PageHeaderNavigation from './page-header-navigation';
 import SideNavbar from './side-navbar';
+import usePrevious from 'hooks/use-previous';
 
 export default function PageHeader() {
+  const [isSidebarVisible, setIsSidebarVisible] = useState(false);
+  const previousIsVisible = usePrevious(isSidebarVisible);
+
   const isAboveMobile = useMediaQuery('(min-width: 767px)');
 
-  const [isSidebarVisible, setIsSidebarVisible] = useState(false);
-
   useIsomorphicLayoutEffect(() => {
-    setIsSidebarVisible(!isAboveMobile);
-  }, [isAboveMobile]);
+    if (previousIsVisible && isAboveMobile) {
+      setIsSidebarVisible(false);
+    }
+  }, [isAboveMobile, previousIsVisible]);
 
   return (
     <header
